@@ -1,0 +1,14 @@
+---
+version: '3'
+services:
+  node:
+    image: node:20
+    volumes:
+      - .:/workspace:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+  
+  db:
+    image: mariadb:11
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: data

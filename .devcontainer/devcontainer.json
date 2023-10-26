@@ -1,0 +1,7 @@
+{
+  "dockerComposeFile": "../docker-compose.devcontainer.yml",
+  "service": "node",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [3001, 3000]
+}
