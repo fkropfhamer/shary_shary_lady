@@ -2,10 +2,13 @@
 version: '3'
 services:
   node:
-    image: node:20
+    image: mcr.microsoft.com/devcontainers/javascript-node:20
     volumes:
       - .:/workspace:cached
     command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
   
   db:
     image: mariadb:11
